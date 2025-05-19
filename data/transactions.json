@@ -1,0 +1,62 @@
+[
+  {
+    "amount": 1000,
+    "type": "INCOME",
+    "description": "salary",
+    "timestamp": "2025-05-18T11:48:02.116Z"
+  },
+  {
+    "amount": 200,
+    "type": "INCOME",
+    "description": "friend gave",
+    "timestamp": "2025-05-18T11:50:27.736Z"
+  },
+  {
+    "amount": 12.5,
+    "type": "EXPENSE",
+    "description": "dinner (Split of 100 among 8)",
+    "timestamp": "2025-05-18T11:52:26.595Z"
+  },
+  {
+    "amount": 100,
+    "type": "INCOME",
+    "description": "parents gift",
+    "timestamp": "2025-05-18T11:55:30.937Z"
+  },
+  {
+    "amount": 20,
+    "type": "INCOME",
+    "description": "friend gave",
+    "timestamp": "2025-05-18T12:00:58.398Z"
+  },
+  {
+    "amount": 100,
+    "type": "INCOME",
+    "description": "friend gave",
+    "timestamp": "2025-05-18T12:08:06.355Z"
+  },
+  {
+    "amount": 10,
+    "type": "EXPENSE",
+    "description": "snacks (Split among 4 people)",
+    "timestamp": "2025-05-18T12:08:26.070Z"
+  },
+  {
+    "amount": 20,
+    "type": "INCOME",
+    "description": "parents gift",
+    "timestamp": "2025-05-18T12:13:09.754Z"
+  },
+  {
+    "amount": 2000,
+    "type": "INCOME",
+    "description": "salary",
+    "timestamp": "2025-05-18T12:17:13.593Z"
+  },
+  {
+    "amount": 100,
+    "type": "EXPENSE",
+    "description": "lunch (Split among 10 people)",
+    "timestamp": "2025-05-18T12:17:32.475Z"
+  }
+]
