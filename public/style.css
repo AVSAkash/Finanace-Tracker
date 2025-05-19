@@ -1,0 +1,260 @@
+/* General Styles */
+body {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #f4f9ff 0%, #e6f0f9 100%);
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+/* Headings */
+h1 {
+  text-align: center;
+  color: #333;
+  margin: 2rem 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+  position: relative;
+  animation: fadeIn 0.8s ease-out;
+}
+
+h1:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #4CAF50, #45a049);
+  border-radius: 2px;
+}
+
+h2 {
+  color: #444;
+  margin: 1.5rem 0 1rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  animation: fadeIn 0.6s ease-out;
+}
+
+h3 {
+  color: #4CAF50;
+  margin: 1rem 0;
+  font-size: 1.3rem;
+  font-weight: 500;
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Forms container with side-by-side forms */
+.forms-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem auto;
+  max-width: 820px; /* slightly wider for bigger forms */
+  animation: fadeIn 0.8s ease forwards;
+}
+
+/* Wide forms (Transaction and Split) */
+.forms-container form.wide-form {
+  flex: 1 1 400px;
+  max-width: 420px;
+  background-color: #fff;
+  padding: 2rem 2.2rem;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(76, 175, 80, 0.15);
+  border: 1.5px solid rgba(76, 175, 80, 0.3);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.forms-container form.wide-form:hover {
+  box-shadow: 0 18px 40px rgba(76, 175, 80, 0.3);
+  transform: translateY(-6px);
+}
+
+.forms-container form.wide-form h2 {
+  font-weight: 700;
+  color: #388e3c;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  font-size: 1.6rem;
+  animation: slideIn 0.6s ease forwards;
+}
+
+/* Credit Card form container with card effect */
+.card {
+  max-width: 380px;
+  margin: 2rem auto;
+  background-color: #fff;
+  padding: 2rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(76, 175, 80, 0.15);
+  border: 1.5px solid rgba(76, 175, 80, 0.3);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.card:hover {
+  box-shadow: 0 18px 40px rgba(76, 175, 80, 0.3);
+  transform: translateY(-6px);
+}
+
+/* Credit card form inside card container */
+form#creditCardForm.narrow-form {
+  background-color: transparent; /* no double bg */
+  padding: 0;
+  box-shadow: none;
+  border: none;
+  width: 100%;
+  animation: none;
+}
+
+form#creditCardForm.narrow-form label,
+form#creditCardForm.narrow-form input,
+form#creditCardForm.narrow-form button {
+  /* Let global styles handle */
+}
+
+/* Inputs inside forms-container get upgraded style */
+.forms-container input[type="number"],
+.forms-container input[type="text"],
+.forms-container input[type="datetime-local"],
+.forms-container select {
+  border: 2px solid #c8e6c9;
+  box-shadow: inset 0 2px 5px rgba(76, 175, 80, 0.1);
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.forms-container input[type="number"]:focus,
+.forms-container input[type="text"]:focus,
+.forms-container input[type="datetime-local"]:focus,
+.forms-container select:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 12px 2px rgba(76, 175, 80, 0.3);
+  outline: none;
+}
+
+/* Inputs outside forms-container use original style */
+input[type="number"],
+input[type="text"],
+input[type="datetime-local"],
+select {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus,
+input[type="datetime-local"]:focus,
+select:focus {
+  border-color: #4CAF50;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.15);
+}
+
+/* Button Styling */
+.forms-container button,
+.card button {
+  width: 100%;
+  padding: 1rem 0;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(76, 175, 80, 0.25);
+  background: linear-gradient(135deg, #66bb6a, #43a047);
+  transition: background 0.4s ease, box-shadow 0.4s ease, transform 0.3s ease;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.forms-container button:hover,
+.card button:hover {
+  background: linear-gradient(135deg, #81c784, #388e3c);
+  box-shadow: 0 9px 18px rgba(56, 142, 60, 0.4);
+  transform: translateY(-3px);
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  max-width: 920px;
+  margin: 1.5rem auto 4rem;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  font-size: 1rem;
+  background-color: #f9fef9;
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.12);
+  border-radius: 14px;
+  overflow: hidden;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+thead th {
+  background: #4caf50;
+  color: white;
+  font-weight: 600;
+  text-align: left;
+  padding: 1rem 1.5rem;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  user-select: none;
+}
+
+tbody tr {
+  background: white;
+  transition: box-shadow 0.3s ease;
+  cursor: default;
+}
+
+tbody tr:hover {
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.18);
+  background-color: #e8f5e9;
+}
+
+tbody td {
+  padding: 1rem 1.5rem;
+  color: #555;
+  font-weight: 500;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes slideIn {
+  from {opacity: 0; transform: translateX(-20px);}
+  to {opacity: 1; transform: translateX(0);}
+}
+
+/* Responsive */
+@media (max-width: 930px) {
+  .forms-container {
+    flex-direction: column;
+    max-width: 420px;
+    margin: 2rem auto;
+  }
+}
