@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Finance Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Finance Tracker</h1>
+
+  <h2>Current Balance: $<span id="balance">Loading...</span></h2>
+
+  <div class="forms-container">
+    <form id="transactionForm" aria-label="Add Transaction" class="wide-form">
+      <h2>Add Transaction</h2>
+
+      <label for="amount">Amount:</label>
+      <input type="number" id="amount" name="amount" required />
+
+      <label for="type">Type:</label>
+      <select id="type" name="type" required>
+        <option value="INCOME">Income</option>
+        <option value="EXPENSE">Expense</option>
+      </select>
+
+      <label for="description">Description:</label>
+      <input type="text" id="description" name="description" required />
+
+      <button type="submit">Add Transaction</button>
+    </form>
+
+    <form id="splitTransactionForm" aria-label="Add Split Transaction" class="wide-form">
+      <h2>Add Split Transaction</h2>
+
+      <label for="totalMoney">Total Money:</label>
+      <input type="number" id="totalMoney" name="totalMoney" required />
+
+      <label for="noOfPeople">Number of People:</label>
+      <input type="number" id="noOfPeople" name="noOfPeople" required />
+
+      <label for="splitType">Type:</label>
+      <select id="splitType" name="splitType" required>
+        <option value="INCOME">Income</option>
+        <option value="EXPENSE">Expense</option>
+      </select>
+
+      <label for="splitDescription">Description:</label>
+      <input type="text" id="splitDescription" name="splitDescription" required />
+
+      <button type="submit">Add Split Transaction</button>
+    </form>
+  </div>
+
+  <h3>Transactions</h3>
+  <table id="transactionsTable" aria-label="Transactions Table">
+    <thead>
+      <tr>
+        <th>Amount</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Timestamp</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Transaction rows will be added here dynamically -->
+    </tbody>
+  </table>
+
+  <h3>Add Credit Card Reminder</h3>
+  <div class="card">
+    <form id="creditCardForm" aria-label="Add Credit Card Reminder" class="narrow-form">
+      <label for="cardName">Card Name:</label>
+      <input type="text" id="cardName" name="cardName" required />
+
+      <label for="limit">Limit:</label>
+      <input type="number" id="limit" name="limit" required />
+
+      <label for="currentBalance">Current Balance:</label>
+      <input type="number" id="currentBalance" name="currentBalance" required />
+
+      <label for="reminderDate">Reminder Date:</label>
+      <input type="datetime-local" id="reminderDate" name="reminderDate" required />
+
+      <button type="submit">Add Credit Card Reminder</button>
+    </form>
+  </div>
+
+  <h3>Credit Card Reminders</h3>
+  <table id="creditCardsTable" aria-label="Credit Card Reminders Table">
+    <thead>
+      <tr>
+        <th>Card Name</th>
+        <th>Limit</th>
+        <th>Current Balance</th>
+        <th>Reminder Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Credit card reminder rows will be added here dynamically -->
+    </tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
